@@ -53,17 +53,17 @@ namespace Bakery.Tests
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
-    // [TestMethod]
-    // public void GetAll_ReturnsVendors_VendorList()
-    // {
-    //   string title01 = "title One";
-    //   string title02 = "title Two";
-    //   Vendor newVendor1 = new Vendor(title01);
-    //   Vendor newVendor2 = new Vendor(title02);
-    //   List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
-    //   List<Vendor> result = Vendor.GetAll();
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+    [TestMethod]
+    public void GetAll_ReturnsVendors_VendorList()
+    {
+      string title01 = "title One";
+      string title02 = "title Two";
+      Vendor newVendor1 = new Vendor(title01);
+      Vendor newVendor2 = new Vendor(title02);
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
     // [TestMethod]
     // public void Find_ReturnsCorrectVendor_Vendor()
     // {
