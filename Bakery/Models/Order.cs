@@ -33,7 +33,7 @@ namespace Bakery.Models
     }
     public static List<Order> GetAll()
     {
-      return _orders;
+      return null;
     }
     public static Order Find(int searchId)
     {
