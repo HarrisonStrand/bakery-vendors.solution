@@ -64,6 +64,15 @@ namespace Bakery.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
-
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string title01 = "This is a title";
+      string title02 = "This is also a title";
+      Order newOrder1 = new Order(title01);
+      Order newOrder2 = new Order(title02);
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }
