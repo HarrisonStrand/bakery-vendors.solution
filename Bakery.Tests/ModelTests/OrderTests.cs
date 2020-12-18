@@ -28,5 +28,13 @@ namespace Bakery.Tests
       string result = newOrder.OrderTitle;
       Assert.AreEqual(title, result);
     }
+    [TestMethod]
+    public void GetDescription_ReturnsOrderDescription_String()
+    {
+      string description = "order description!";
+      Order newOrder = new Order(description);
+      string result = newOrder.OrderDescription;
+      Assert.AreEqual("not a description", result);
+    }
   }
 }
