@@ -7,7 +7,7 @@ namespace Bakery.Models
     public string OrderTitle { get; set; }
     public string OrderDescription { get; set; }
     public int OrderPrice { get; set; }
-    public int OrderDate { get; set; }
+    public string OrderDate { get; set; }
     public int Id { get; }
     private static List<Order> _orders = new List<Order> { };
     public Order(string orderTitle)
@@ -26,7 +26,7 @@ namespace Bakery.Models
     {
       OrderPrice = orderPrice;
     }
-    public Order(string orderTitle, string orderDescription, int orderPrice, int orderDate)
+    public Order(string orderTitle, string orderDescription, int orderPrice, string orderDate)
       : this(orderTitle, orderDescription, orderPrice)
     {
       OrderDate = orderDate;
