@@ -28,13 +28,26 @@ namespace Bakery.Tests
       string result = newOrder.OrderTitle;
       Assert.AreEqual(title, result);
     }
-    [TestMethod]
-    public void GetDescription_ReturnsOrderDescription_String()
+        [TestMethod]
+    public void SetTitle_SetTitle_String()
     {
-      string description = "order description!";
-      Order newOrder = new Order(description);
-      string result = newOrder.OrderDescription;
-      Assert.AreEqual("not a description", result);
+      string title = "this is a title";
+      Order newOrder = new Order(title);
+      string updatedTitle = "this is the new title";
+      newOrder.OrderTitle = updatedTitle;
+      string result = newOrder.OrderTitle;
+      Assert.AreEqual(updatedTitle, result);
     }
+    // [TestMethod]
+    // public void GetAll_ReturnsItems_ItemList()
+    // {
+    //   string description01 = "Walk the dog";
+    //   string description02 = "Wash the dishes";
+    //   Item newItem1 = new Item(description01);
+    //   Item newItem2 = new Item(description02);
+    //   List<Item> newList = new List<Item> { newItem1, newItem2 };
+    //   List<Item> result = Item.GetAll();
+    //   CollectionAssert.AreEqual(newList, result);
+    // }
   }
 }
