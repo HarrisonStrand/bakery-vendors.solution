@@ -39,7 +39,7 @@ namespace Bakery.Tests
       Assert.AreEqual(updatedName, result);
     }
     [TestMethod]
-    public void GetId_VendorInstantiateWithAnIdAndGetterReturns_Int()
+    public void GetId_ReturnsVendorId_Int()
     {
       string name = "Vendor name";
       Vendor newVendor = new Vendor(name);
@@ -73,6 +73,18 @@ namespace Bakery.Tests
       Vendor newVendor2 = new Vendor(name02);
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
+    }
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      string title = "this is a title";
+      Order newOrder = new Order(title);
+      List<Order> newList = new List<Order> { newOrder };
+      string name = "Vendor Name";
+      Vendor newVendor = new Vendor(name);
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
