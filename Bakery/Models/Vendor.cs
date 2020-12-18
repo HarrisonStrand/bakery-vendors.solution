@@ -9,13 +9,17 @@ namespace Bakery.Models
     public string VendorDescription { get; set; }
     public int Id { get; }
     public List<Order> Orders { get; set; }
-    public Vendor(string vendorName, string vendorDescription)
+    public Vendor(string vendorName)
     {
       VendorName = vendorName;
-      VendorDescription = vendorDescription;
       _vendors.Add(this);
       Id = _vendors.Count;
       Orders = new List<Order> { };
+    }
+    public Vendor(string vendorName, string vendorDescription)
+      : this(vendorDescription)
+    {
+      VendorDescription = vendorDescription;
     }
     public static List<Vendor> GetAll()
     {

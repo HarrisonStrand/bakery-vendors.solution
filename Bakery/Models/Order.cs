@@ -6,18 +6,30 @@ namespace Bakery.Models
   {
     public string OrderTitle { get; set; }
     public string OrderDescription { get; set; }
-    public string OrderPrice { get; set; }
-    public string OrderDate { get; set; }
+    public int OrderPrice { get; set; }
+    public int OrderDate { get; set; }
     public int Id { get; }
     private static List<Order> _orders = new List<Order> { };
-    public Order(string orderTitle, string orderDescription, string orderPrice, string orderDate)
+    public Order(string orderTitle)
     {
       OrderTitle = orderTitle;
-      OrderDescription = orderDescription;
-      OrderPrice = orderPrice;
-      OrderDate = orderDate;
       _orders.Add(this);
       Id = _orders.Count;
+    }
+    public Order(string orderTitle, string orderDescription)
+      : this(orderTitle)
+    {
+      OrderDescription = orderDescription;
+    }
+    public Order(string orderTitle, string orderDescription, int orderPrice)
+      : this(orderTitle, orderDescription)
+    {
+      OrderPrice = orderPrice;
+    }
+    public Order(string orderTitle, string orderDescription, int orderPrice, int orderDate)
+      : this(orderTitle, orderDescription, orderPrice)
+    {
+      OrderDate = orderDate;
     }
     public static List<Order> GetAll()
     {
