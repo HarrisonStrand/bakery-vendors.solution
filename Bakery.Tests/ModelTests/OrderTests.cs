@@ -26,7 +26,7 @@ namespace Bakery.Tests
       string title = "order title!";
       Order newOrder = new Order(title);
       string result = newOrder.OrderTitle;
-      Assert.AreEqual("not a title", result);
+      Assert.AreEqual(title, result);
     }
   }
 }
