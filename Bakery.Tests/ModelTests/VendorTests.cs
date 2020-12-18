@@ -14,12 +14,12 @@ namespace Bakery.Tests
       Vendor.ClearAll();
     }
 
-    // [TestMethod]
-    // public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
-    // {
-    //   Vendor newVendor = new Vendor("test");
-    //   Assert.AreEqual(typeof(Vendor), newVendor.GetType());
-    // }
+    [TestMethod]
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
+    {
+      Vendor newVendor = new Vendor("test");
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    }
     // [TestMethod]
     // public void GetTitle_ReturnsVendorTitle_String()
     // {
