@@ -27,7 +27,7 @@ namespace Bakery.Models
     }
     public static Vendor Find(int searchId)
     {
-      return _vendors[searchId-1];
+      return _vendors[searchId-2];
     }
     public void AddOrder(Order order)
     {
