@@ -20,16 +20,16 @@ namespace Bakery.Tests
       Vendor newVendor = new Vendor("test");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
+    [TestMethod]
+    public void GetTitle_ReturnsVendorTitle_String()
+    {
+      string name = "Vendor name!";
+      Vendor newVendor = new Vendor(name);
+      string result = newVendor.VendorName;
+      Assert.AreEqual("fail", result);
+    }
     // [TestMethod]
-    // public void GetTitle_ReturnsVendorTitle_String()
-    // {
-    //   string title = "Vendor title!";
-    //   Vendor newVendor = new Vendor(title);
-    //   string result = newVendor.VendorTitle;
-    //   Assert.AreEqual(title, result);
-    // }
-    // [TestMethod]
-    // public void SetTitle_SetTitle_String()
+    // public void SetName_SetName_String()
     // {
     //   string title = "this is a title";
     //   Vendor newVendor = new Vendor(title);
