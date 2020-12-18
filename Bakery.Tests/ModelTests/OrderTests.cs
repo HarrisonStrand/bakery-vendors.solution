@@ -28,7 +28,7 @@ namespace Bakery.Tests
       string result = newOrder.OrderTitle;
       Assert.AreEqual(title, result);
     }
-        [TestMethod]
+    [TestMethod]
     public void SetTitle_SetTitle_String()
     {
       string title = "this is a title";
@@ -37,6 +37,14 @@ namespace Bakery.Tests
       newOrder.OrderTitle = updatedTitle;
       string result = newOrder.OrderTitle;
       Assert.AreEqual(updatedTitle, result);
+    }
+    [TestMethod]
+    public void GetId_OrderInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string title = "Order Title";
+      Order newOrder = new Order(title);
+      int result = newOrder.Id;
+      Assert.AreEqual(2, result);
     }
     [TestMethod]
     public void GetAll_ReturnsEmptyList_ItemList()
@@ -56,5 +64,6 @@ namespace Bakery.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
   }
 }
