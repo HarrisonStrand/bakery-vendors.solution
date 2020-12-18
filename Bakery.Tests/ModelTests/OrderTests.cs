@@ -38,6 +38,14 @@ namespace Bakery.Tests
       string result = newOrder.OrderTitle;
       Assert.AreEqual(updatedTitle, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_ItemList()
+    {
+      List<Order> newList = new List<Order> { };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+
     // [TestMethod]
     // public void GetAll_ReturnsItems_ItemList()
     // {
