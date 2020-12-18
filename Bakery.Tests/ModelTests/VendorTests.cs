@@ -44,7 +44,7 @@ namespace Bakery.Tests
       string name = "Vendor name";
       Vendor newVendor = new Vendor(name);
       int result = newVendor.Id;
-      Assert.AreEqual(3, result);
+      Assert.AreEqual(1, result);
     }
     // [TestMethod]
     // public void GetAll_ReturnsEmptyList_ItemList()
