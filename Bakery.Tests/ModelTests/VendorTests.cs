@@ -21,12 +21,12 @@ namespace Bakery.Tests
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
     [TestMethod]
-    public void GetTitle_ReturnsVendorTitle_String()
+    public void GetName_ReturnsVendorName_String()
     {
       string name = "Vendor name!";
       Vendor newVendor = new Vendor(name);
       string result = newVendor.VendorName;
-      Assert.AreEqual("fail", result);
+      Assert.AreEqual(name, result);
     }
     // [TestMethod]
     // public void SetName_SetName_String()
