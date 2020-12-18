@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+@using Bakery.Models;
+
+<h1>VENDORS</h1>
+<h2>Click a vendor below for details:</h2>
+
+@if (@Model.Count == 0)
+{
+  <h2>currently empty...</h2>
+}
+@foreach (Vendor vendor in Model)
+{
+  <h2><a href='/vendors/@vendor.Id'>@vendor.VendorName</a></h2>
+}
+<p><a href='/'>Home Page</a></p>
