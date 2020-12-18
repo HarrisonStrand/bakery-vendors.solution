@@ -46,13 +46,13 @@ namespace Bakery.Tests
       int result = newVendor.Id;
       Assert.AreEqual(1, result);
     }
-    // [TestMethod]
-    // public void GetAll_ReturnsEmptyList_ItemList()
-    // {
-    //   List<Vendor> newList = new List<Vendor> { };
-    //   List<Vendor> result = Vendor.GetAll();
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_VendorList()
+    {
+      List<Vendor> newList = new List<Vendor> { };
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
     // [TestMethod]
     // public void GetAll_ReturnsVendors_VendorList()
     // {

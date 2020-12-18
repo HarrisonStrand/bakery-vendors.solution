@@ -47,7 +47,7 @@ namespace Bakery.Tests
       Assert.AreEqual(1, result);
     }
     [TestMethod]
-    public void GetAll_ReturnsEmptyList_ItemList()
+    public void GetAll_ReturnsEmptyList_OrderList()
     {
       List<Order> newList = new List<Order> { };
       List<Order> result = Order.GetAll();
