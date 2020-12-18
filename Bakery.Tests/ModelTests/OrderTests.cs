@@ -20,5 +20,13 @@ namespace Bakery.Tests
       Order newOrder = new Order("test");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+    [TestMethod]
+    public void GetTitle_ReturnsOrderTitle_String()
+    {
+      string title = "order title!";
+      Order newOrder = new Order(title);
+      string result = newOrder.OrderTitle;
+      Assert.AreEqual("not a title", result);
+    }
   }
 }
