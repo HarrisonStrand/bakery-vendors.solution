@@ -36,7 +36,7 @@ namespace Bakery.Tests
       string updatedName = "this is the new name";
       newVendor.VendorName = updatedName;
       string result = newVendor.VendorName;
-      Assert.AreEqual("fail", result);
+      Assert.AreEqual(name, result);
     }
     // [TestMethod]
     // public void GetId_VendorInstantiateWithAnIdAndGetterReturns_Int()
