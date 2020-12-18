@@ -41,7 +41,7 @@ namespace Bakery.Models
     }
     public static void ClearAll()
     {
-      _orders.Clear();
+      _orders = null;
     }
   }
 }
