@@ -37,7 +37,7 @@ namespace Bakery.Models
     }
     public static Order Find(int searchId)
     {
-      return _orders[searchId-2];
+      return _orders[searchId-1];
     }
     public static void ClearAll()
     {
