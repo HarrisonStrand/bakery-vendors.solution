@@ -44,7 +44,7 @@ namespace Bakery.Tests
       string title = "Order Title";
       Order newOrder = new Order(title);
       int result = newOrder.Id;
-      Assert.AreEqual(2, result);
+      Assert.AreEqual(1, result);
     }
     [TestMethod]
     public void GetAll_ReturnsEmptyList_ItemList()
