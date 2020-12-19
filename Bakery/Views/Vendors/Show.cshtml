@@ -1,23 +1,18 @@
 @{
   Layout = "_Layout";
 }
-<div class="container">
-  <div class="card">
-      @using Bakery.Models;
+<h1>Order for Vendor:</h1>
 
-      <h1>Order for Vendor:</h1>
+@using Bakery.Models;
 
-      <ol>
-      @foreach (Order order in @Model["orders"])
-      {
-        <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderTitle</a></li>
-      }
-      </ol>
-    </div>
-    <div class="card">
-      <h3><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></h3>
-      <h3><a href='/vendors'>Return to vendor list</a></h3>
-      <h3><a href='/'>Home Page</a></h3>
-    </div>
-  </div>
-</div>
+
+<ol>
+@foreach (Order order in @Model["orders"])
+{
+  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.OrderTitle</a></li>
+}
+</ol>
+
+<h3><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></h3>
+<h3><a href='/vendors'>Return to vendor list</a></h3>
+<h3><a href='/'>Home Page</a></h3>
